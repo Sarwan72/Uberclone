@@ -15,10 +15,10 @@ connectToDb();
 // app.use(cors());
 
 const allowedOrigins = [
-  "http://localhost:5173",          // local dev frontend
-  "https://uberclone-3-sarwan-kumars-projects-17476828.vercel.app/"  // deployed frontend
+  "http://localhost:5173", // local dev
+  "https://uberclone-3-git-main-sarwan-kumars-projects-17476828.vercel.app",
+  "https://uberclone-3-1p1e5dnzx-sarwan-kumars-projects-17476828.vercel.app"
 ];
-
 app.use(
   cors({
     origin: allowedOrigins, // frontend URL
