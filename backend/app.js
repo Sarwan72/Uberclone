@@ -14,17 +14,32 @@ connectToDb();
 
 // app.use(cors());
 
-const allowedOrigins = [
-  "http://localhost:5173", // local dev
-  "https://uberclone-3-git-main-sarwan-kumars-projects-17476828.vercel.app",
-  "https://uberclone-3-1p1e5dnzx-sarwan-kumars-projects-17476828.vercel.app"
-];
+// const allowedOrigins = [
+//   "http://localhost:5173", // local dev
+//   "https://uberclone-3-git-main-sarwan-kumars-projects-17476828.vercel.app",
+//   "https://uberclone-3-1p1e5dnzx-sarwan-kumars-projects-17476828.vercel.app"
+// ];
+// app.use(
+//   cors({
+//     origin: allowedOrigins, // frontend URL
+//     credentials: true, // allow cookies & authorization headers
+//   })
+// );
+
+
+
+
 app.use(
   cors({
-    origin: allowedOrigins, // frontend URL
-    credentials: true, // allow cookies & authorization headers
+    origin: [
+ "http://localhost:5173", // local dev
+  "https://uberclone-3-git-main-sarwan-kumars-projects-17476828.vercel.app",
+  "https://uberclone-3-1p1e5dnzx-sarwan-kumars-projects-17476828.vercel.app"
+    ],
+    credentials: true, // allow cookies/auth headers
   })
 );
+
 
 app.use(express.json());
 app.use(express.urlencoded({extend: true}));
