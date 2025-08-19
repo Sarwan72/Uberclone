@@ -36,6 +36,7 @@ app.use(
   "https://uberclone-3-git-main-sarwan-kumars-projects-17476828.vercel.app",
   "https://uberclone-3-1p1e5dnzx-sarwan-kumars-projects-17476828.vercel.app"
     ],
+     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true, // allow cookies/auth headers
   })
 );
