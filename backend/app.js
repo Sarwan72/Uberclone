@@ -14,11 +14,14 @@ connectToDb();
 
 // app.use(cors());
 
-
+const allowedOrigins = [
+  "http://localhost:5173",          // local dev frontend
+  "https://uberclone-3-sarwan-kumars-projects-17476828.vercel.app/"  // deployed frontend
+];
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // frontend URL
+    origin: allowedOrigins, // frontend URL
     credentials: true, // allow cookies & authorization headers
   })
 );
