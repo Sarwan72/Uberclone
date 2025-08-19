@@ -12,7 +12,17 @@ const rideRoutes=require('./routes/ride.routes');
 connectToDb();
 
 
-app.use(cors());
+// app.use(cors());
+
+
+
+app.use(
+  cors({
+    origin: "http://localhost:5173", // frontend URL
+    credentials: true, // allow cookies & authorization headers
+  })
+);
+
 app.use(express.json());
 app.use(express.urlencoded({extend: true}));
 app.use(cookieParser());

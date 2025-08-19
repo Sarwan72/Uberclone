@@ -59,12 +59,18 @@
 
 // export default LookingForDriver;
 import React from 'react'
-
+import { useState } from 'react';
 const LookingForDriver = (props) => {
+
+    const [visible, setVisible] = useState(true);
+
+  if (!visible) return null;
     return (
         <div>
-            <h5 className='p-1 text-center w-[93%] absolute top-0' onClick={() => {
-                props.setVehicleFound(false)
+            <h5 className='p-1 text-center w-[93%] absolute top-0' 
+            onClick={() => {
+                props.setLookingForDriver(false)
+                // setVisible(false);
             }}><i className="text-3xl text-gray-200 ri-arrow-down-wide-line"></i></h5>
             <h3 className='text-2xl font-semibold mb-5'>Looking for a Driver</h3>
 

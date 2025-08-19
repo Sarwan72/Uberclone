@@ -29,6 +29,7 @@ const CaptainHome = () => {
       userType: "captain",
     });
     const updateLocation = () => {
+        if (!captain) return; 
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
           socket.emit("update-location-captain", {
@@ -73,11 +74,17 @@ const CaptainHome = () => {
     function () {
       if (ridePopupPanel) {
         gsap.to(ridePopUpPanelRef.current, {
-          transform: "translateY(0)",
+         transform: "translateY(0)", 
+          // y: 0,   //  full visible
+      duration: 10,
+      ease: "power10.out"
         });
       } else {
         gsap.to(ridePopUpPanelRef.current, {
           transform: "translateY(100%)",
+              // y: "100%",
+           duration: 10,
+      ease: "power3.in"
         });
       }
     },
