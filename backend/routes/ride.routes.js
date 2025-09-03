@@ -14,25 +14,12 @@ router.post('/create',
 )
 
 
-// router.get('/get-fare',
-//     authMiddleware.authUser,
-//     query('pickup').isString().isLength({ min: 3 }).withMessage('Invalid pickup address'),
-//     query('destination').isString().isLength({ min: 3 }).withMessage('Invalid destination address'),
-//     rideController.getFare
-// )
-
-router.post('/fare',
+router.get('/get-fare',
     authMiddleware.authUser,
-    body('pickup.lat').isFloat({ min: -90, max: 90 }).withMessage('Invalid pickup latitude'),
-    body('pickup.lon').isFloat({ min: -180, max: 180 }).withMessage('Invalid pickup longitude'),
-    body('destination.lat').isFloat({ min: -90, max: 90 }).withMessage('Invalid destination latitude'),
-    body('destination.lon').isFloat({ min: -180, max: 180 }).withMessage('Invalid destination longitude'),
+    query('pickup').isString().isLength({ min: 3 }).withMessage('Invalid pickup address'),
+    query('destination').isString().isLength({ min: 3 }).withMessage('Invalid destination address'),
     rideController.getFare
-);
-
-
-
-
+)
 
 router.post('/confirm',
     authMiddleware.authCaptain,
