@@ -33,7 +33,7 @@ app.use(
   cors({
     origin: [
  "http://localhost:5173", // local dev
-  "https://uberclone-3-sarwan-kumars-projects-17476828.vercel.app",
+  "https://uberclone-3-ign1l98gu-sarwan-kumars-projects-17476828.vercel.app",
     ],
      methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true, // allow cookies/auth headers
