@@ -32,8 +32,8 @@ connectToDb();
 app.use(
   cors({
     origin: [
- "http://localhost:5173", // local dev
-  "https://uberclone-3-ign1l98gu-sarwan-kumars-projects-17476828.vercel.app",
+ "https://uberclone-3-9xqa5x9og-sarwan-kumars-projects-17476828.vercel.app/", // local dev
+  "http://localhost:5173",
     ],
      methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true, // allow cookies/auth headers
